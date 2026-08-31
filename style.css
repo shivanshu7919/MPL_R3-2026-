@@ -1,0 +1,1048 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    min-height: 100vh;
+
+    background-color: #d9eeee;
+
+    color: #101010;
+
+    font-family: "Comic Neue", cursive;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   HALFTONE BACKGROUND
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.35;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #7d999b 2px,
+            transparent 2.5px
+        );
+
+    background-size: 22px 22px;
+
+    mask-image:
+        linear-gradient(
+            90deg,
+            black,
+            transparent 70%
+        );
+
+    z-index: -2;
+}
+
+
+/* =====================================================
+   LIGHT CENTER
+===================================================== */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 900px;
+    height: 650px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -45%);
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,0.55),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.topbar {
+
+    width: 100%;
+
+    min-height: 125px;
+
+    padding: 18px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 36px;
+
+    border-bottom: 3px solid #111;
+
+    background: rgba(218,239,239,0.82);
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.logo-shield {
+
+    width: 92px;
+    height: 100px;
+
+    background: #ffffff;
+
+    border: 4px solid #111;
+
+    clip-path: polygon(
+        50% 0%,
+        95% 22%,
+        88% 78%,
+        50% 100%,
+        12% 78%,
+        5% 22%
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow:
+        5px 6px 0 #111;
+
+    transform: rotate(-2deg);
+
+}
+
+
+.crown {
+
+    font-size: 19px;
+
+    color: #e5b52d;
+
+    margin-bottom: 3px;
+}
+
+
+.logo-text {
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-weight: bold;
+
+    font-size: 9px;
+
+    line-height: 1.15;
+
+}
+
+
+/* =====================================================
+   HEADER BUTTONS
+===================================================== */
+
+.nav-button {
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 58px;
+
+    padding: 0 30px;
+
+    border: 4px solid #111;
+
+    border-radius: 20px;
+
+    box-shadow:
+        5px 6px 0 #111;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.nav-button:hover {
+
+    transform:
+        translate(3px, 3px);
+
+    box-shadow:
+        2px 3px 0 #111;
+
+}
+
+.controls{
+    display:flex;
+    margin-left:auto;
+    gap:20px;
+}
+
+
+/* HOME VIEW */
+
+.home {
+
+    background: #ffe36b;
+
+    min-width: 175px;
+
+}
+
+
+/* POWER UP */
+
+.powerup {
+
+    background: #63dce1;
+
+    min-width: 225px;
+
+}
+
+
+/* RESET */
+
+.reset {
+
+    background: #b9ff72;
+
+    min-width: 125px;
+
+}
+
+
+/* =====================================================
+   NOTICE
+===================================================== */
+
+/* .notice {
+
+    height: 53px;
+
+    flex: 1;
+
+    max-width: 680px;
+
+    min-width: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+    background: #ffe76d;
+
+    border: 3px solid #111;
+
+    border-radius: 20px;
+
+    box-shadow:
+        4px 5px 0 #111;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+} */
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    text-align: center;
+
+    padding-top: 50px;
+
+    margin-bottom: 35px;
+
+    position: relative;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: clamp(
+        60px,
+        7vw,
+        95px
+    );
+
+    line-height: 0.9;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero h1 span:first-child {
+
+    color: #111;
+
+}
+
+
+.hero .tracks {
+
+    color: #3f91cf;
+
+    margin-left: 12px;
+
+}
+
+
+/* =====================================================
+   TITLE UNDERLINE
+===================================================== */
+
+.underline {
+
+    width: 380px;
+
+    height: 6px;
+
+    background: #111;
+
+    border-radius: 50%;
+
+    margin: 14px auto 0;
+
+    transform: rotate(-1deg);
+
+    position: relative;
+
+}
+
+
+.underline::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 5px;
+
+    background: #3f91cf;
+
+    right: 25px;
+
+    top: 6px;
+
+    border-radius: 50%;
+
+}
+
+
+/* =====================================================
+   TRACK GRID
+===================================================== */
+
+.tracks-grid {
+
+    width: min(
+        1400px,
+        90%
+    );
+
+    margin: 0 auto 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 35px 30px;
+
+}
+
+
+/* =====================================================
+   TRACK CARD
+===================================================== */
+
+.track-card {
+
+    height: 265px;
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: #111;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(70,160,180,0.10) 2px,
+            transparent 3px
+        );
+
+    background-size: 18px 18px;
+
+    background-color: rgba(
+        248,
+        252,
+        249,
+        0.82
+    );
+
+    border: 3px solid #111;
+
+    border-radius: 25px;
+
+    box-shadow:
+        5px 7px 0 #111;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
+
+.track-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(-1deg);
+
+    box-shadow:
+        8px 12px 0 #111;
+
+}
+
+
+.track-card:active {
+
+    transform:
+        translate(3px, 5px);
+
+    box-shadow:
+        2px 3px 0 #111;
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.track-icon {
+
+    font-size: 82px;
+
+    line-height: 1;
+
+    margin-bottom: 22px;
+
+    filter:
+        drop-shadow(
+            2px 3px 0 rgba(0,0,0,0.18)
+        );
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.track-card:hover .track-icon {
+
+    transform:
+        scale(1.12)
+        rotate(-4deg);
+
+}
+
+
+/* =====================================================
+   SPECIAL MATH ICON
+===================================================== */
+
+.math-symbol {
+
+    font-family: Georgia, serif;
+
+    font-size: 100px;
+
+    color: #57cbd0;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   MUSIC ICON
+===================================================== */
+
+.music-symbol {
+
+    font-size: 105px;
+
+    color: #ee5c91;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   LIGHTNING
+===================================================== */
+
+.lightning {
+
+    color: #f15b42;
+
+    font-size: 95px;
+
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.track-card h2 {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   SPEED LINES
+===================================================== */
+
+.speed-lines {
+
+    position: absolute;
+
+    right: 28px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.speed-lines span {
+
+    display: block;
+
+    width: 22px;
+
+    height: 3px;
+
+    background: #111;
+
+    border-radius: 10px;
+
+    transform: rotate(-35deg);
+
+}
+
+
+.speed-lines span:nth-child(2) {
+
+    width: 15px;
+
+    transform: rotate(-10deg);
+
+}
+
+
+.speed-lines span:nth-child(3) {
+
+    width: 10px;
+
+    transform: rotate(25deg);
+
+}
+
+
+/* =====================================================
+   CARD COLORS
+===================================================== */
+
+.sports .track-icon {
+
+    color: #f7c536;
+
+}
+
+
+.movies .track-icon {
+
+    color: #56b9d4;
+
+}
+
+
+.memes .track-icon {
+
+    color: #f2c532;
+
+}
+
+
+.tiebreaker .track-icon {
+
+    color: #f2bd36;
+
+}
+
+
+.maths .track-icon {
+
+    color: #4fc6cb;
+
+}
+
+
+.songs .track-icon {
+
+    color: #ed5a91;
+
+}
+
+
+.games .track-icon {
+
+    color: #4daed3;
+
+}
+
+
+.rapid .track-icon {
+
+    color: #ef634b;
+
+}
+
+
+/* =====================================================
+   DOODLES
+===================================================== */
+
+.doodle {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    font-size: 65px;
+
+    z-index: 0;
+
+}
+
+
+.doodle-left {
+
+    left: 7%;
+
+    top: 190px;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.doodle-right {
+
+    right: 7%;
+
+    top: 190px;
+
+    font-size: 45px;
+
+}
+
+
+/* =====================================================
+   PAPER PLANE
+===================================================== */
+
+.paper-plane {
+
+    position: fixed;
+
+    right: 28%;
+
+    top: 130px;
+
+    font-size: 80px;
+
+    color: #ff932f;
+
+    transform:
+        rotate(-20deg);
+
+    text-shadow:
+        3px 3px 0 #111;
+
+    z-index: 0;
+
+}
+
+
+/* =====================================================
+   SCRIBBLES
+===================================================== */
+
+.scribble {
+
+    position: fixed;
+
+    font-size: 75px;
+
+    font-weight: bold;
+
+    pointer-events: none;
+
+}
+
+
+.scribble-1 {
+
+    left: 4%;
+
+    bottom: 160px;
+
+    transform: rotate(20deg);
+
+}
+
+
+.scribble-2 {
+
+    right: 5%;
+
+    bottom: 160px;
+
+    transform: rotate(-20deg);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .topbar {
+
+        gap: 18px;
+
+        padding: 15px 20px;
+
+    }
+
+    /* .notice {
+
+        font-size: 14px;
+
+        min-width: 220px;
+
+    } */
+
+    .nav-button {
+
+        padding: 0 20px;
+
+        font-size: 17px;
+
+    }
+
+    .tracks-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .topbar {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        min-height: auto;
+
+    }
+
+    .logo {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+    }
+
+    /* .notice {
+
+        order: 5;
+
+        width: 100%;
+
+        max-width: none;
+
+    } */
+
+    .nav-button {
+
+        height: 48px;
+
+        font-size: 15px;
+
+        padding: 0 16px;
+
+    }
+
+    .home {
+
+        min-width: 120px;
+
+    }
+
+    .powerup {
+
+        min-width: 160px;
+
+    }
+
+    .reset {
+
+        min-width: 100px;
+
+    }
+
+    .hero {
+
+        padding-top: 35px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 58px;
+
+    }
+
+    .hero h1 span {
+
+        display: block;
+
+    }
+
+    .hero .tracks {
+
+        margin-left: 0;
+
+    }
+
+    .underline {
+
+        width: 230px;
+
+    }
+
+    .tracks-grid {
+
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+    .track-card {
+
+        height: 220px;
+
+    }
+
+    .paper-plane {
+
+        display: none;
+
+    }
+
+    .doodle {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .nav-button {
+
+        font-size: 13px;
+
+        padding: 0 12px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+    .track-card {
+
+        height: 200px;
+
+    }
+
+    .track-icon {
+
+        font-size: 65px;
+
+    }
+
+    .track-card h2 {
+
+        font-size: 28px;
+
+    }
+
+}
