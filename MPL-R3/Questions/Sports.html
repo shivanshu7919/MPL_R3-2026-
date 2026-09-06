@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MPL - Sports Track</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <!-- LOGO -->
+        <div class="logo-container">
+            <img src="images/logo.png" alt="MPL Logo">
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+
+            <button class="nav-button" id="homeBtn">
+                Home
+            </button>
+
+            <button class="nav-button power-btn" id="powerBtn">
+                PowerUp
+                <span class="power-icon">⚡</span>
+            </button>
+
+            <button class="nav-button reset-btn" id="resetBtn">
+                Reset
+                <span class="reset-icon">↻</span>
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================
+         FLAG BANNER
+    ====================================== -->
+
+    <section class="flag-section">
+
+        <div class="rope"></div>
+
+        <div class="flag-container">
+
+            <!-- FLAG 1 -->
+            <div class="flag flag-1">
+                <img src="images/flags.png" alt="">
+            </div>
+
+            <!-- FLAG 2 -->
+            <div class="flag flag-2">
+                <img src="images/flags.png" alt="">
+            </div>
+
+            <!-- FLAG 3 -->
+            <div class="flag flag-3">
+                <img src="images/flags.png" alt="">
+            </div>
+
+            <!-- FLAG 4 -->
+            <div class="flag flag-4">
+                <img src="images/flags.png" alt="">
+            </div>
+
+            <!-- FLAG 5 -->
+            <div class="flag flag-5">
+                <img src="images/flags.png" alt="">
+            </div>
+
+            <!-- FLAG 6 -->
+            <div class="flag flag-6">
+                <img src="images/flags.png" alt="">
+            </div>
+
+            <!-- FLAG 7 -->
+            <div class="flag flag-7">
+                <img src="images/flags.png" alt="">
+            </div>
+
+            <!-- FLAG 8 -->
+            <div class="flag flag-8">
+                <img src="images/flags.png" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         TITLE
+    ====================================== -->
+
+    <section class="title-section">
+
+        <h1>
+            <span>SPORTS</span>
+            TRACK
+        </h1>
+
+        <div class="title-decoration">
+            ◆ ◆ ◆
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         QUESTION GRID
+    ====================================== -->
+
+    <main class="question-container">
+
+        <!-- QUESTION 1 -->
+
+        <div class="question-card" data-question="1">
+
+            <div class="question-title">
+                QUESTION 1
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="points">
+                100
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question-card" data-question="2">
+
+            <div class="question-title">
+                QUESTION 2
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="points">
+                200
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question-card" data-question="3">
+
+            <div class="question-title">
+                QUESTION 3
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="points">
+                300
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question-card" data-question="4">
+
+            <div class="question-title">
+                QUESTION 4
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="points">
+                400
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="question-card" data-question="5">
+
+            <div class="question-title">
+                QUESTION 5
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="points">
+                500
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 6 -->
+
+        <div class="question-card" data-question="6">
+
+            <div class="question-title">
+                QUESTION 6
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="points">
+                600
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================
+         QUESTION POPUP
+    ====================================== -->
+
+    <div class="popup" id="questionPopup">
+
+        <div class="popup-box">
+
+            <button class="close-btn" id="closePopup">
+                ×
+            </button>
+
+            <div class="popup-small">
+                SPORTS TRACK
+            </div>
+
+            <h2 id="popupQuestion">
+                QUESTION 1
+            </h2>
+
+            <div class="popup-points" id="popupPoints">
+                100
+            </div>
+
+            <button class="start-question">
+                START QUESTION
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

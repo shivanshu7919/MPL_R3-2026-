@@ -1,0 +1,1182 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #542b16;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(100,45,15,.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #e8c79b,
+            #d5ad7b,
+            #e6c092,
+            #d1a373
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   PAPER TEXTURE
+========================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .18;
+
+    background-image:
+
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(80,40,15,.08) 4px
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    width: calc(100% - 24px);
+
+    height: 135px;
+
+    margin: 6px 12px 0;
+
+    padding: 12px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-radius: 25px;
+
+    border: 3px solid #713319;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #692c19,
+            #914b2c,
+            #6b2c18
+        );
+
+    box-shadow:
+
+        inset 0 0 20px
+        rgba(45,15,5,.65),
+
+        0 8px 15px
+        rgba(55,25,10,.35);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-container {
+
+    width: 150px;
+
+    height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.logo-container img {
+
+    width: 105px;
+
+    max-height: 105px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            3px 4px 3px
+            rgba(30,10,0,.55)
+        );
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   NAV BUTTON
+========================================= */
+
+.nav-button {
+
+    height: 78px;
+
+    min-width: 280px;
+
+    padding: 0 40px;
+
+    border-radius: 45px;
+
+    border: 3px solid #c99b65;
+
+    cursor: pointer;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #fff8ec;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #754321,
+            #47230f
+        );
+
+    text-shadow:
+
+        2px 3px 2px
+        rgba(0,0,0,.7);
+
+    box-shadow:
+
+        inset 0 3px 3px
+        rgba(255,255,255,.18),
+
+        inset 0 -8px 15px
+        rgba(20,5,0,.4),
+
+        0 4px 8px
+        rgba(40,15,5,.45);
+
+    transition:
+        transform .25s ease,
+        filter .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/* =========================================
+   POWER BUTTON
+========================================= */
+
+.power-btn {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #7a4927,
+            #482410
+        );
+}
+
+
+/* =========================================
+   NAV HOVER
+========================================= */
+
+.nav-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    filter:
+        brightness(1.15);
+
+    box-shadow:
+
+        inset 0 3px 3px
+        rgba(255,255,255,.25),
+
+        0 8px 18px
+        rgba(40,15,5,.5);
+}
+
+
+/* =========================================
+   NAV ICONS
+========================================= */
+
+.power-icon {
+
+    color: #ffd35a;
+
+    margin-left: 15px;
+}
+
+
+.reset-icon {
+
+    margin-left: 18px;
+
+    font-size: 45px;
+}
+
+
+/* =========================================
+   FLAG SECTION
+========================================= */
+
+.flag-section {
+
+    width: 100%;
+
+    height: 205px;
+
+    position: relative;
+
+    overflow: visible;
+
+    margin-top: 0;
+}
+
+
+/* =========================================
+   ROPE
+========================================= */
+
+.rope {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: -2%;
+
+    width: 104%;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            #3a1a0c,
+            #8a5734,
+            #35170b
+        );
+
+    box-shadow:
+
+        0 2px 3px
+        rgba(0,0,0,.45);
+
+    transform:
+        rotate(-1deg);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   FLAG CONTAINER
+========================================= */
+
+.flag-container {
+
+    position: absolute;
+
+    top: 27px;
+
+    left: 2%;
+
+    width: 96%;
+
+    height: 175px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   INDIVIDUAL FLAG
+========================================= */
+
+.flag {
+
+    width: 11.2%;
+
+    height: 165px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transform-origin: top center;
+
+    transition:
+        transform .25s ease,
+
+        filter .25s ease;
+}
+
+
+/* =========================================
+   FLAG IMAGE
+========================================= */
+
+.flag img {
+
+    position: absolute;
+
+    top: 0;
+
+    height: 165px;
+
+    width: 965px;
+
+    max-width: none;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/*
+    Your image contains all 8 flags.
+
+    Each flag moves the large image
+    to show a different section.
+*/
+
+
+.flag-1 img {
+    left: 0;
+}
+
+.flag-2 img {
+    left: -121px;
+}
+
+.flag-3 img {
+    left: -242px;
+}
+
+.flag-4 img {
+    left: -363px;
+}
+
+.flag-5 img {
+    left: -484px;
+}
+
+.flag-6 img {
+    left: -605px;
+}
+
+.flag-7 img {
+    left: -726px;
+}
+
+.flag-8 img {
+    left: -847px;
+}
+
+
+/* =========================================
+   FLAG HOVER
+========================================= */
+
+.flag:hover {
+
+    animation:
+        flagWind
+        1.2s
+        ease-in-out
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 8px 6px
+            rgba(60,25,10,.35)
+        );
+}
+
+
+/* =========================================
+   WIND ANIMATION
+========================================= */
+
+@keyframes flagWind {
+
+    0% {
+
+        transform:
+            rotate(0deg)
+            skewX(0deg)
+            translateX(0);
+
+    }
+
+    15% {
+
+        transform:
+            rotate(5deg)
+            skewX(-5deg)
+            translateX(4px);
+
+    }
+
+    30% {
+
+        transform:
+            rotate(-4deg)
+            skewX(5deg)
+            translateX(-5px);
+
+    }
+
+    45% {
+
+        transform:
+            rotate(6deg)
+            skewX(-7deg)
+            translateX(6px);
+
+    }
+
+    60% {
+
+        transform:
+            rotate(-5deg)
+            skewX(6deg)
+            translateX(-5px);
+
+    }
+
+    75% {
+
+        transform:
+            rotate(3deg)
+            skewX(-4deg)
+            translateX(3px);
+
+    }
+
+    90% {
+
+        transform:
+            rotate(-2deg)
+            skewX(2deg)
+            translateX(-2px);
+
+    }
+
+    100% {
+
+        transform:
+            rotate(0deg)
+            skewX(0deg)
+            translateX(0);
+
+    }
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title-section {
+
+    text-align: center;
+
+    margin-top: -10px;
+
+    margin-bottom: 30px;
+}
+
+
+.title-section h1 {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(50px, 5vw, 78px);
+
+    letter-spacing: 3px;
+
+    color: #673314;
+
+    text-shadow:
+
+        2px 3px 2px
+        rgba(255,240,215,.8),
+
+        4px 5px 3px
+        rgba(70,25,5,.35);
+}
+
+
+.title-section h1 span {
+
+    color: #673314;
+}
+
+
+/* =========================================
+   TITLE DECORATION
+========================================= */
+
+.title-decoration {
+
+    margin-top: 3px;
+
+    color: #a36a27;
+
+    font-size: 18px;
+
+    letter-spacing: 10px;
+}
+
+
+/* =========================================
+   QUESTION GRID
+========================================= */
+
+.question-container {
+
+    width: 86%;
+
+    max-width: 1400px;
+
+    margin:
+        0 auto 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px 55px;
+}
+
+
+/* =========================================
+   QUESTION CARD
+========================================= */
+
+.question-card {
+
+    height: 235px;
+
+    border-radius: 22px;
+
+    border: 3px solid
+        rgba(255,244,222,.9);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,250,237,.52),
+            rgba(195,148,99,.45)
+        );
+
+    box-shadow:
+
+        inset 0 2px 5px
+        rgba(255,255,255,.8),
+
+        inset 0 -10px 20px
+        rgba(120,65,25,.15),
+
+        0 10px 18px
+        rgba(85,40,15,.28);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease,
+
+        background .3s ease;
+}
+
+
+/* =========================================
+   CARD GLASS SHINE
+========================================= */
+
+.question-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150%;
+
+    height: 60%;
+
+    top: -35%;
+
+    left: -25%;
+
+    transform:
+        rotate(-12deg);
+
+    background:
+
+        linear-gradient(
+            rgba(255,255,255,.3),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.question-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+
+        inset 0 2px 5px
+        white,
+
+        0 18px 30px
+        rgba(75,30,8,.35),
+
+        0 0 15px
+        rgba(255,211,142,.5);
+}
+
+
+/* =========================================
+   QUESTION TITLE
+========================================= */
+
+.question-title {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #673314;
+
+    text-shadow:
+
+        1px 2px 1px
+        #fff1d5,
+
+        2px 3px 2px
+        rgba(80,30,5,.3);
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+
+    width: 55%;
+
+    height: 2px;
+
+    margin:
+        15px 0 12px;
+
+    background:
+        #a66c2a;
+
+    position: relative;
+}
+
+
+.divider::before,
+.divider::after {
+
+    content: "◆";
+
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #a66c2a;
+
+    font-size: 9px;
+}
+
+
+.divider::before {
+    left: -8px;
+}
+
+
+.divider::after {
+    right: -8px;
+}
+
+
+/* =========================================
+   POINTS
+========================================= */
+
+.points {
+
+    font-size: 32px;
+
+    color: #9b641f;
+
+    font-weight: bold;
+
+    text-shadow:
+
+        1px 2px 1px
+        #fff0d2,
+
+        2px 3px 2px
+        rgba(80,30,5,.2);
+}
+
+
+/* =========================================
+   POPUP
+========================================= */
+
+.popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(40,17,5,.65);
+
+    backdrop-filter:
+        blur(5px);
+
+    z-index: 100;
+}
+
+
+.popup.active {
+
+    display: flex;
+
+    animation:
+        popupFade
+        .25s
+        ease;
+}
+
+
+/* =========================================
+   POPUP BOX
+========================================= */
+
+.popup-box {
+
+    width:
+        min(550px, 90%);
+
+    padding: 50px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #f0d4a9,
+            #c59665
+        );
+
+    border: 4px solid
+        #f5dfba;
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0,0,0,.55),
+
+        inset 0 0 20px
+        rgba(90,40,10,.25);
+
+    animation:
+        popupScale
+        .35s
+        ease;
+}
+
+
+/* =========================================
+   CLOSE
+========================================= */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 18px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 38px;
+
+    color: #5b2c14;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   POPUP TEXT
+========================================= */
+
+.popup-small {
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    color: #8c5823;
+}
+
+
+.popup-box h2 {
+
+    margin-top: 15px;
+
+    font-size: 40px;
+
+    color: #5c2b13;
+}
+
+
+.popup-points {
+
+    font-size: 55px;
+
+    color: #a66b22;
+
+    margin: 15px 0 25px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.start-question {
+
+    padding:
+        15px 35px;
+
+    border-radius: 30px;
+
+    border: 3px solid #d5a86f;
+
+    background:
+
+        linear-gradient(
+            #75421f,
+            #3d1b0c
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 10px
+        rgba(0,0,0,.35);
+
+    transition: .25s;
+}
+
+
+.start-question:hover {
+
+    transform:
+        scale(1.06);
+
+    filter:
+        brightness(1.15);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes popupFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes popupScale {
+
+    from {
+        transform:
+            scale(.75)
+            translateY(30px);
+
+        opacity: 0;
+    }
+
+    to {
+        transform:
+            scale(1)
+            translateY(0);
+
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 1100px) {
+
+    .navbar {
+
+        height: auto;
+
+        flex-direction: column;
+
+        padding: 15px;
+    }
+
+
+    .logo-container {
+
+        height: 90px;
+    }
+
+
+    .navigation {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .nav-button {
+
+        min-width: 0;
+
+        flex: 1;
+
+        font-size: 25px;
+
+        height: 60px;
+
+        padding: 0 15px;
+    }
+
+
+    .question-container {
+
+        width: 90%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media(max-width: 700px) {
+
+    .navigation {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .nav-button {
+
+        width: 100%;
+    }
+
+
+    .flag-section {
+
+        height: 150px;
+
+        overflow: hidden;
+    }
+
+
+    .flag-container {
+
+        width: 160%;
+
+        left: -30%;
+
+        transform: scale(.8);
+
+        transform-origin: top center;
+    }
+
+
+    .question-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .question-card {
+
+        height: 210px;
+    }
+
+
+    .title-section h1 {
+
+        font-size: 42px;
+    }
+}

@@ -1,0 +1,808 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    overflow-x: hidden;
+
+    color: #3d2418;
+
+    /* parchment background */
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,0.25),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(100,45,15,0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #e7c79c,
+            #cfa579,
+            #e4c294,
+            #d3aa7d
+        );
+
+    position: relative;
+}
+
+
+/* Paper texture */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.25;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(80,40,15,0.05) 4px
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================
+   TOP NAVBAR
+========================================= */
+
+.topbar {
+
+    height: 135px;
+
+    margin: 12px 12px 0;
+
+    padding: 18px 22px;
+
+    display: grid;
+
+    grid-template-columns: 120px 1fr 1.2fr 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+    border-radius: 25px;
+
+    border: 3px solid #71321d;
+
+    background:
+        linear-gradient(
+            90deg,
+            #77351f,
+            #9c5636,
+            #6e2c1b
+        );
+
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,0.45),
+        0 8px 15px rgba(55,25,10,0.35);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    height: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    color: #f5dba8;
+
+    text-shadow:
+        2px 2px 2px #2b1209;
+}
+
+/* .crown {
+    font-size: 25px;
+    margin-bottom: -8px;
+}
+
+.logo-main {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.logo-small {
+    font-size: 11px;
+}
+
+.logo-ribbon {
+    background: #273452;
+    color: white;
+
+    padding: 3px 15px;
+
+    font-size: 10px;
+
+    border-radius: 3px;
+
+    margin-top: 2px;
+} */
+
+
+/* =========================================
+   NAV BUTTONS
+========================================= */
+
+.nav-btn {
+
+    height: 78px;
+
+    border-radius: 40px;
+
+    cursor: pointer;
+
+    color: #eee;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    position: relative;
+
+    transition: 0.3s;
+
+    text-shadow:
+        2px 3px 3px #111;
+
+}
+
+
+/* Home */
+
+.home-btn {
+
+    background:
+        linear-gradient(
+            #9b623b,
+            #452513
+        );
+
+    border: 4px solid #c99667;
+
+    box-shadow:
+        inset 0 0 20px #241006;
+}
+
+
+/* PowerUp */
+
+.power-btn {
+    background:
+        linear-gradient(
+            #9b623b,
+            #452513
+        );
+
+    border: 4px solid #c99667;
+
+    box-shadow:
+        inset 0 0 20px #241006;
+}
+
+.power-btn b {
+    color: #d964ff;
+    margin-left: 20px;
+}
+
+
+/* Reset */
+
+.reset-btn {
+
+    background:
+        linear-gradient(
+            #9b623b,
+            #452513
+        );
+
+    border: 4px solid #c99667;
+
+    box-shadow:
+        inset 0 0 20px #241006;
+}
+
+.reset-btn b {
+    margin-left: 25px;
+}
+
+
+/* Nav hover */
+
+.nav-btn:hover {
+
+    transform: translateY(-3px) scale(1.02);
+
+    filter: brightness(1.15);
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    text-align: center;
+}
+
+/* .flags{
+    mix-blend-mode: multiply;
+    filter: contrast(1.2);
+    height: 200px;
+    z-index: 1;
+} */
+.left-flag{
+    position: fixed; 
+  left: 0 !important;
+  top: 30%;
+  transform: translateY(-50%) rotate(-12deg);
+  transform-origin: left center;
+  
+  /* Removes white background */
+  mix-blend-mode: multiply;
+  
+  /* Responsive width */
+  width: 25vw;
+  height: auto;
+  z-index: 0;
+}
+.right-flag{
+    position: fixed; 
+  right: 0 !important; /* Locks it to the extreme right edge */
+  top: 30%;
+  transform: translateY(-50%) rotate(12deg); /* Positive angle tilts it toward the right side */
+  transform-origin: right center;            /* Anchors the rotation to the right edge */
+  
+  /* Removes white background */
+  mix-blend-mode: multiply;
+  
+  /* Responsive sizing */
+  width: 25vw;
+  height: auto;
+  z-index: 0;
+}
+
+.hero h1 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    color: #f4f0e9;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        3px 4px 3px #684832,
+        0 0 5px white;
+
+    z-index: 2;
+}
+
+
+.math-decoration {
+
+    position: absolute;
+
+    font-size: 45px;
+
+    font-family: "Times New Roman", serif;
+
+    color: rgba(52, 27, 18, .75);
+
+    letter-spacing: 20px;
+}
+
+.math-decoration.left {
+    left: 25px;
+    top: 20px;
+}
+
+.math-decoration.right {
+    right: 30px;
+    top: 30px;
+}
+
+
+/* =========================================
+   CARDS GRID
+========================================= */
+
+.tracks {
+
+    width: 86%;
+
+    max-width: 1450px;
+
+    margin: 0 auto 60px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+
+}
+
+
+/* =========================================
+   GLASS CARDS
+========================================= */
+
+a{
+    text-decoration: none;
+}
+
+.track-card {
+
+    height: 260px;
+
+    border-radius: 28px;
+
+    border: 3px solid rgba(255,255,255,.65);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.30),
+            rgba(125,80,45,.22)
+        );
+
+    backdrop-filter: blur(4px);
+
+    -webkit-backdrop-filter: blur(4px);
+
+    box-shadow:
+
+        inset 0 2px 2px rgba(255,255,255,.8),
+
+        inset 0 -5px 15px rgba(90,45,20,.2),
+
+        0 10px 20px rgba(70,35,15,.25);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+
+/* Glass shine */
+
+.track-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130%;
+
+    height: 45%;
+
+    top: -20%;
+
+    left: -20%;
+
+    transform: rotate(-12deg);
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.3),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* Card hover */
+
+.track-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.025);
+
+    box-shadow:
+
+        inset 0 2px 2px white,
+
+        0 20px 35px rgba(66,30,10,.4),
+
+        0 0 20px rgba(255,220,170,.5);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.icon {
+
+    font-size: 82px;
+
+    height: 115px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    filter:
+        drop-shadow(4px 5px 3px rgba(60,25,10,.45));
+
+    transition: transform .3s;
+}
+
+
+.track-card:hover .icon {
+
+    transform:
+        translateY(-7px)
+        rotate(-3deg)
+        scale(1.1);
+}
+
+
+.math-icon {
+
+    font-size: 105px;
+
+    font-family: "Times New Roman", serif;
+
+    font-weight: bold;
+
+    color: #777;
+
+    text-shadow:
+        2px 3px 2px #eee,
+        4px 5px 4px #444;
+}
+
+
+.lightning {
+
+    color: #f5c34c;
+
+    text-shadow:
+        3px 4px 2px #76521d;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.track-card h2 {
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+
+    color: #814407;
+
+    text-shadow:
+
+        2px 2px 1px #fff0da,
+
+        3px 4px 3px rgba(50,25,10,.65);
+
+}
+
+
+/* =========================================
+   POPUP
+========================================= */
+
+.popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(25,12,5,.65);
+
+    backdrop-filter: blur(5px);
+
+    z-index: 100;
+}
+
+
+.popup.active {
+
+    display: flex;
+
+    animation: fadeIn .3s ease;
+}
+
+
+.popup-box {
+
+    width: min(500px, 90%);
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8c89e,
+            #b88259
+        );
+
+    border: 4px solid #f2d9b3;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.6),
+        inset 0 0 20px rgba(80,35,10,.4);
+
+    position: relative;
+
+    animation: popup .4s ease;
+}
+
+
+.popup-box > div {
+
+    font-size: 80px;
+
+    margin-bottom: 10px;
+}
+
+
+.popup-box h2 {
+
+    font-size: 40px;
+
+    color: #4a2819;
+
+    margin-bottom: 15px;
+}
+
+
+.popup-box p {
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+
+    color: #5d3824;
+}
+
+
+/* Close */
+
+.close {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    color: #4b2717;
+}
+
+
+/* Start */
+
+.start-btn {
+
+    padding: 14px 35px;
+
+    border-radius: 30px;
+
+    border: 3px solid #dec08e;
+
+    background:
+        linear-gradient(
+            #764529,
+            #35190e
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,.4);
+
+    transition: .25s;
+}
+
+
+.start-btn:hover {
+
+    transform: scale(1.06);
+
+    filter: brightness(1.2);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes popup {
+
+    from {
+        transform: scale(.7) translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .topbar {
+
+        grid-template-columns:
+            100px 1fr 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .nav-btn {
+        font-size: 28px;
+    }
+
+    .tracks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .topbar {
+
+        height: auto;
+
+        grid-template-columns: 1fr 1fr;
+
+        padding: 12px;
+
+        gap: 10px;
+    }
+
+    .logo {
+        grid-column: span 2;
+    }
+
+    .nav-btn {
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: 130px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .math-decoration {
+        display: none;
+    }
+
+    .tracks {
+
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .track-card {
+        height: 230px;
+    }
+}

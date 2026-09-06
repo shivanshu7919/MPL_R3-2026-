@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MPL Tracks</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= TOP NAVBAR ================= -->
+    <header class="topbar">
+
+        <div class="logo">
+            <a class="logo" href="#"><img src="Logo.png" height="100px"></a>
+
+            <!-- <div class="crown">♛</div>
+            <div class="logo-main">MATH</div>
+            <div class="logo-small">PREMIERS</div> -->
+            <!-- <div class="logo-ribbon">LEAGUE</div> -->
+        </div>
+        
+        <button class="nav-btn home-btn" onclick="goHome()">
+            <span>Home</span>
+        </button>
+
+        <button class="nav-btn power-btn" onclick="powerUp()">
+            <span>PowerUp</span>
+        </button>
+
+        <button class="nav-btn reset-btn" onclick="resetGame()">
+            <span>Reset</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="hero">
+        <!-- <img class="flags" src="flag.jpeg"> -->
+        <div class="flags">
+            <img class="left-flag" src="flag1.jpeg">
+            <img class="right-flag" src="flag2.jpeg">
+        </div>
+
+
+        <h1>JEOPARDY TRACKS</h1>
+    
+
+    </section>
+
+
+    <!-- ================= CATEGORY CARDS ================= -->
+
+    <main class="tracks">
+
+        <a href="Questions/Sports.html">
+            <div class="track-card" onclick="openTrack('Sports')">
+                <div class="icon">🏆</div>
+                <h2>SPORTS</h2>
+            </div>
+        </a>
+
+
+        <a href="./Questions/Movies.html">
+            <div class="track-card" onclick="openTrack('Movies')">
+                <div class="icon">🎬</div>
+                <h2>MOVIES</h2>
+            </div>
+        </a>
+
+        <a href="./Questions/Memes.html">
+            <div class="track-card" onclick="openTrack('Memes')">
+                <div class="icon">😄</div>
+                <h2>MEMES</h2>
+            </div>
+        </a>
+
+        <a href="./Questions/Tiebreaker.html">
+            <div class="track-card" onclick="openTrack('Tiebreaker')">
+                <div class="icon">🏆</div>
+                <h2>TIEBREAKER</h2>
+            </div>
+        </a>
+
+        <a href="./Questions/Maths.html">
+            <div class="track-card" onclick="openTrack('Maths')">
+                <div class="icon math-icon">π</div>
+                <h2>MATHS</h2>
+            </div>
+        </a>
+
+        <a href="./Questions/Songs.html">
+            <div class="track-card" onclick="openTrack('Songs')">
+                <div class="icon">♫</div>
+                <h2>SONGS</h2>
+            </div>
+        </a>
+
+        <a href="./Questions/Games.html">
+            <div class="track-card" onclick="openTrack('Games')">
+                <div class="icon">🎮</div>
+                <h2>GAMES</h2>
+            </div>
+        </a>
+
+        <a href="./Questions/RapidFire.html">
+            <div class="track-card" onclick="openTrack('Rapid Fire')">
+                <div class="icon lightning">⚡</div>
+                <h2>RAPID FIRE</h2>
+            </div>
+        </a>
+
+    </main>
+
+
+    <!-- ================= POPUP ================= -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-box">
+
+            <button class="close" onclick="closePopup()">×</button>
+
+            <div id="popupIcon">🏆</div>
+
+            <h2 id="popupTitle">SPORTS</h2>
+
+            <p id="popupText">
+                Get ready for the challenge!
+            </p>
+
+            <button class="start-btn" onclick="startTrack()">
+                START TRACK
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>
