@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Memes Track | MPL</title>
+
+    <!-- COMMON TRACK CSS -->
+    <link
+        rel="stylesheet"
+        href="track.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="track-navbar">
+
+        <!-- LOGO -->
+
+        <div class="track-logo">
+
+            <img
+                src="../Logo.png"
+                alt="MPL Logo"
+            >
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="track-navigation">
+
+            <!-- HOME -->
+
+            <button
+                class="track-nav-button"
+                id="homeButton"
+            >
+                Home
+            </button>
+
+
+            <!-- POWERUP -->
+
+            <button
+                class="track-nav-button"
+                id="powerButton"
+            >
+
+                PowerUp
+
+                <span class="power-icon">
+                    ⚡
+                </span>
+
+            </button>
+
+
+            <!-- RESET -->
+
+            <button
+                class="track-nav-button"
+                id="resetButton"
+            >
+
+                Reset
+
+                <span class="reset-icon">
+                    ↻
+                </span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         TRACK TITLE
+    ====================================================== -->
+
+    <section class="track-header">
+
+        <h1 class="track-title">
+            MEMES TRACK
+        </h1>
+
+        <div class="title-decoration">
+            ◆ ◆ ◆
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUESTION GRID
+    ====================================================== -->
+
+    <main class="question-grid">
+
+
+        <!-- =================================================
+             QUESTION 1
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="MEMES"
+
+            data-question="Which meme features a man looking back at another woman while walking with his girlfriend?"
+
+            data-points="100"
+
+            data-answer="The Distracted Boyfriend meme."
+        >
+
+            <div class="question-name">
+                QUESTION 1
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                100
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 2
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="MEMES"
+
+            data-question="Which meme is commonly associated with the phrase 'This is fine'?"
+
+            data-points="200"
+
+            data-answer="The 'This Is Fine' dog meme."
+        >
+
+            <div class="question-name">
+                QUESTION 2
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                200
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 3
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="MEMES"
+
+            data-question="Which meme character is a green cartoon frog that became popular on the internet?"
+
+            data-points="300"
+
+            data-answer="Pepe the Frog."
+        >
+
+            <div class="question-name">
+                QUESTION 3
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                300
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 4
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="MEMES"
+
+            data-question="Which meme features a black-and-white image of a man pointing at his head, suggesting intelligence?"
+
+            data-points="400"
+
+            data-answer="The 'Roll Safe' meme."
+        >
+
+            <div class="question-name">
+                QUESTION 4
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                400
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 5
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="MEMES"
+
+            data-question="What does the acronym LOL commonly mean on the internet?"
+
+            data-points="500"
+
+            data-answer="LOL means 'Laughing Out Loud'."
+        >
+
+            <div class="question-name">
+                QUESTION 5
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                500
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 6
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="MEMES"
+
+            data-question="Which meme format shows a person making a dramatic facial expression and is commonly used to express disbelief?"
+
+            data-points="600"
+
+            data-answer="The 'Black Guy Hiding Behind a Tree' meme is commonly used online to express awkwardness or wanting to disappear."
+        >
+
+            <div class="question-name">
+                QUESTION 6
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                600
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         QUESTION POPUP
+    ====================================================== -->
+
+    <div
+        class="question-popup"
+        id="questionPopup"
+    >
+
+        <div class="popup-content">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="close-popup"
+                id="closePopup"
+            >
+                ×
+            </button>
+
+
+            <!-- TRACK -->
+
+            <div
+                class="popup-track"
+                id="popupTrack"
+            >
+                MEMES
+            </div>
+
+
+            <!-- QUESTION -->
+
+            <div
+                class="popup-question"
+                id="popupQuestion"
+            >
+                Question
+            </div>
+
+
+            <!-- POINTS -->
+
+            <div
+                class="popup-points"
+                id="popupPoints"
+            >
+                100
+            </div>
+
+
+            <!-- ANSWER BUTTON -->
+
+            <button
+                class="answer-button"
+                id="answerButton"
+            >
+                SHOW ANSWER
+            </button>
+
+
+            <!-- ANSWER -->
+
+            <div
+                class="popup-answer"
+                id="popupAnswer"
+            >
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COMMON TRACK JS
+    ====================================================== -->
+
+    <script src="track.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rapid Fire | MPL</title>
+
+    <link rel="stylesheet" href="track.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="track-navbar">
+
+        <div class="track-logo">
+            <img src="../Logo.png" alt="MPL Logo">
+        </div>
+
+        <div class="track-navigation">
+
+            <button class="track-nav-button" id="homeButton">
+                HOME
+            </button>
+
+            <button class="track-nav-button" id="powerButton">
+                POWERUP ⚡
+            </button>
+
+            <button class="track-nav-button" id="resetButton">
+                RESET ↻
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= TRACK HEADER ================= -->
+    <header class="track-header">
+
+        <h1 class="track-title">
+            RAPID FIRE
+        </h1>
+
+        <div class="title-decoration"></div>
+
+    </header>
+
+
+    <!-- ================= QUESTIONS ================= -->
+    <main class="question-grid">
+
+        <!-- 100 -->
+        <div class="question-card"
+             data-track="RAPID FIRE"
+             data-points="100"
+             data-question="What is the capital of India?"
+             data-answer="New Delhi">
+
+            <h2 class="question-name">
+                QUESTION 1
+            </h2>
+
+            <div class="question-divider"></div>
+
+            <p class="question-points">
+                100
+            </p>
+
+        </div>
+
+
+        <!-- 200 -->
+        <div class="question-card"
+             data-track="RAPID FIRE"
+             data-points="200"
+             data-question="How many days are there in a leap year?"
+             data-answer="366 days">
+
+            <h2 class="question-name">
+                QUESTION 2
+            </h2>
+
+            <div class="question-divider"></div>
+
+            <p class="question-points">
+                200
+            </p>
+
+        </div>
+
+
+        <!-- 300 -->
+        <div class="question-card"
+             data-track="RAPID FIRE"
+             data-points="300"
+             data-question="Which planet is known as the Red Planet?"
+             data-answer="Mars">
+
+            <h2 class="question-name">
+                QUESTION 3
+            </h2>
+
+            <div class="question-divider"></div>
+
+            <p class="question-points">
+                300
+            </p>
+
+        </div>
+
+
+        <!-- 400 -->
+        <div class="question-card"
+             data-track="RAPID FIRE"
+             data-points="400"
+             data-question="Who wrote the national anthem of India?"
+             data-answer="Rabindranath Tagore">
+
+            <h2 class="question-name">
+                QUESTION 4
+            </h2>
+
+            <div class="question-divider"></div>
+
+            <p class="question-points">
+                400
+            </p>
+
+        </div>
+
+
+        <!-- 500 -->
+        <div class="question-card"
+             data-track="RAPID FIRE"
+             data-points="500"
+             data-question="What is the largest ocean on Earth?"
+             data-answer="Pacific Ocean">
+
+            <h2 class="question-name">
+                QUESTION 5
+            </h2>
+
+            <div class="question-divider"></div>
+
+            <p class="question-points">
+                500
+            </p>
+
+        </div>
+
+
+        <!-- 600 -->
+        <div class="question-card"
+             data-track="RAPID FIRE"
+             data-points="600"
+             data-question="Which is the only mammal capable of true flight?"
+             data-answer="Bat">
+
+            <h2 class="question-name">
+                QUESTION 6
+            </h2>
+
+            <div class="question-divider"></div>
+
+            <p class="question-points">
+                600
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= QUESTION POPUP ================= -->
+    <div class="question-popup" id="questionPopup">
+
+        <div class="popup-content">
+
+            <button class="close-popup" id="closePopup">
+                ×
+            </button>
+
+            <p class="popup-track" id="popupTrack">
+                RAPID FIRE
+            </p>
+
+            <h2 class="popup-question" id="popupQuestion">
+                Question
+            </h2>
+
+            <p class="popup-points">
+                <span id="popupPoints">100</span> POINTS
+            </p>
+
+            <button class="answer-button" id="answerButton">
+                SHOW ANSWER
+            </button>
+
+            <div class="popup-answer" id="popupAnswer">
+                Answer
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="track.js"></script>
+
+</body>
+</html>

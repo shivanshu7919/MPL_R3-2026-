@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Songs Track | MPL</title>
+
+    <!-- COMMON TRACK CSS -->
+    <link rel="stylesheet" href="track.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="track-navbar">
+
+        <!-- LOGO -->
+
+        <div class="track-logo">
+
+            <img
+                src="../Logo.png"
+                alt="MPL Logo"
+            >
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="track-navigation">
+
+            <!-- HOME -->
+
+            <button
+                class="track-nav-button"
+                id="homeButton"
+            >
+                Home
+            </button>
+
+
+            <!-- POWERUP -->
+
+            <button
+                class="track-nav-button"
+                id="powerButton"
+            >
+
+                PowerUp
+
+                <span class="power-icon">
+                    ⚡
+                </span>
+
+            </button>
+
+
+            <!-- RESET -->
+
+            <button
+                class="track-nav-button"
+                id="resetButton"
+            >
+
+                Reset
+
+                <span class="reset-icon">
+                    ↻
+                </span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         TRACK TITLE
+    ====================================================== -->
+
+    <section class="track-header">
+
+        <h1 class="track-title">
+            SONGS TRACK
+        </h1>
+
+        <div class="title-decoration">
+            ◆ ◆ ◆
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUESTION GRID
+    ====================================================== -->
+
+    <main class="question-grid">
+
+
+        <!-- =================================================
+             QUESTION 1
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="SONGS"
+
+            data-question="Which singer is known as the 'King of Pop'?"
+
+            data-points="100"
+
+            data-answer="Michael Jackson."
+        >
+
+            <div class="question-name">
+                QUESTION 1
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                100
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 2
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="SONGS"
+
+            data-question="Which band released the song 'Bohemian Rhapsody'?"
+
+            data-points="200"
+
+            data-answer="Queen."
+        >
+
+            <div class="question-name">
+                QUESTION 2
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                200
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 3
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="SONGS"
+
+            data-question="Which Indian singer is popularly known as the 'Nightingale of India'?"
+
+            data-points="300"
+
+            data-answer="Lata Mangeshkar."
+        >
+
+            <div class="question-name">
+                QUESTION 3
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                300
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 4
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="SONGS"
+
+            data-question="Which artist released the album 'Thriller'?"
+
+            data-points="400"
+
+            data-answer="Michael Jackson."
+        >
+
+            <div class="question-name">
+                QUESTION 4
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                400
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 5
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="SONGS"
+
+            data-question="Which singer performed the song 'Shape of You'?"
+
+            data-points="500"
+
+            data-answer="Ed Sheeran."
+        >
+
+            <div class="question-name">
+                QUESTION 5
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                500
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUESTION 6
+        ================================================== -->
+
+        <div
+            class="question-card"
+
+            data-track="SONGS"
+
+            data-question="Which legendary Indian music composer composed the song 'Jai Ho'?"
+
+            data-points="600"
+
+            data-answer="A. R. Rahman."
+        >
+
+            <div class="question-name">
+                QUESTION 6
+            </div>
+
+            <div class="question-divider"></div>
+
+            <div class="question-points">
+                600
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         QUESTION POPUP
+    ====================================================== -->
+
+    <div
+        class="question-popup"
+        id="questionPopup"
+    >
+
+        <div class="popup-content">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                class="close-popup"
+                id="closePopup"
+            >
+                ×
+            </button>
+
+
+            <!-- TRACK NAME -->
+
+            <div
+                class="popup-track"
+                id="popupTrack"
+            >
+                SONGS
+            </div>
+
+
+            <!-- QUESTION -->
+
+            <div
+                class="popup-question"
+                id="popupQuestion"
+            >
+                Question
+            </div>
+
+
+            <!-- POINTS -->
+
+            <div
+                class="popup-points"
+                id="popupPoints"
+            >
+                100
+            </div>
+
+
+            <!-- SHOW ANSWER -->
+
+            <button
+                class="answer-button"
+                id="answerButton"
+            >
+                SHOW ANSWER
+            </button>
+
+
+            <!-- ANSWER -->
+
+            <div
+                class="popup-answer"
+                id="popupAnswer"
+            >
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COMMON TRACK JAVASCRIPT
+    ====================================================== -->
+
+    <script src="track.js"></script>
+
+</body>
+
+</html>

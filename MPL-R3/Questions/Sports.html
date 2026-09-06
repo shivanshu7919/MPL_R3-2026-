@@ -2,219 +2,446 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MPL - Sports Track</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>Sports Track | MPL</title>
+
+
+    <!-- COMMON CSS -->
+
+    <link
+        rel="stylesheet"
+        href="track.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- =====================================
-         NAVBAR
-    ====================================== -->
 
-    <header class="navbar">
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
+
+    <header class="track-navbar">
+
 
         <!-- LOGO -->
-        <div class="logo-container">
-            <img src="../Logo.png" alt="MPL Logo">
+
+        <div class="track-logo">
+
+            <img
+                src="../Logo.png"
+                alt="MPL Logo"
+            >
+
         </div>
 
 
         <!-- NAVIGATION -->
-        <nav class="navigation">
 
-            <button class="nav-button" id="homeBtn">
+        <nav class="track-navigation">
+
+
+            <button
+                class="track-nav-button"
+                id="homeButton"
+            >
+
                 Home
+
             </button>
 
-            <button class="nav-button power-btn" id="powerBtn">
+
+            <button
+                class="track-nav-button"
+                id="powerButton"
+            >
+
                 PowerUp
-                <span class="power-icon">⚡</span>
+
+                <span class="power-icon">
+                    ⚡
+                </span>
+
             </button>
 
-            <button class="nav-button reset-btn" id="resetBtn">
+
+            <button
+                class="track-nav-button"
+                id="resetButton"
+            >
+
                 Reset
-                <span class="reset-icon">↻</span>
+
+                <span class="reset-icon">
+                    ↻
+                </span>
+
             </button>
+
 
         </nav>
 
     </header>
 
 
-    <!-- =====================================
-         FLAG BANNER
-    ====================================== -->
 
+    <!-- =================================================
+         PAGE TITLE
+    ================================================== -->
 
+    <section class="track-header">
 
+        <h1 class="track-title">
 
-    <!-- =====================================
-         TITLE
-    ====================================== -->
+            SPORTS TRACK
 
-    <section class="title-section">
-
-        <h1>
-            <span>SPORTS</span>
-            TRACK
         </h1>
 
+
         <div class="title-decoration">
+
             ◆ ◆ ◆
+
         </div>
 
     </section>
 
 
-    <!-- =====================================
+
+    <!-- =================================================
          QUESTION GRID
-    ====================================== -->
+    ================================================== -->
 
-    <main class="question-container">
+    <main class="question-grid">
 
-        <!-- QUESTION 1 -->
 
-        <div class="question-card" data-question="1">
+        <!-- =========================================
+             QUESTION 1
+        ========================================== -->
 
-            <div class="question-title">
+        <div
+            class="question-card"
+
+            data-track="SPORTS"
+
+            data-question="Which country has won the most FIFA World Cups?"
+
+            data-points="100"
+
+            data-answer="Brazil has won the FIFA World Cup five times."
+        >
+
+            <div class="question-name">
+
                 QUESTION 1
+
             </div>
 
-            <div class="divider"></div>
 
-            <div class="points">
+            <div class="question-divider"></div>
+
+
+            <div class="question-points">
+
                 100
+
             </div>
 
         </div>
 
 
-        <!-- QUESTION 2 -->
 
-        <div class="question-card" data-question="2">
+        <!-- =========================================
+             QUESTION 2
+        ========================================== -->
 
-            <div class="question-title">
+        <div
+            class="question-card"
+
+            data-track="SPORTS"
+
+            data-question="Who holds the record for the most Olympic gold medals?"
+
+            data-points="200"
+
+            data-answer="Michael Phelps holds the record with 23 Olympic gold medals."
+        >
+
+            <div class="question-name">
+
                 QUESTION 2
+
             </div>
 
-            <div class="divider"></div>
 
-            <div class="points">
+            <div class="question-divider"></div>
+
+
+            <div class="question-points">
+
                 200
+
             </div>
 
         </div>
 
 
-        <!-- QUESTION 3 -->
 
-        <div class="question-card" data-question="3">
+        <!-- =========================================
+             QUESTION 3
+        ========================================== -->
 
-            <div class="question-title">
+        <div
+            class="question-card"
+
+            data-track="SPORTS"
+
+            data-question="Which country hosted the 2016 Summer Olympics?"
+
+            data-points="300"
+
+            data-answer="Brazil hosted the 2016 Summer Olympics in Rio de Janeiro."
+        >
+
+            <div class="question-name">
+
                 QUESTION 3
+
             </div>
 
-            <div class="divider"></div>
 
-            <div class="points">
+            <div class="question-divider"></div>
+
+
+            <div class="question-points">
+
                 300
+
             </div>
 
         </div>
 
 
-        <!-- QUESTION 4 -->
 
-        <div class="question-card" data-question="4">
+        <!-- =========================================
+             QUESTION 4
+        ========================================== -->
 
-            <div class="question-title">
+        <div
+            class="question-card"
+
+            data-track="SPORTS"
+
+            data-question="Which team has won the most NBA championships?"
+
+            data-points="400"
+
+            data-answer="The Boston Celtics have won the most NBA championships."
+        >
+
+            <div class="question-name">
+
                 QUESTION 4
+
             </div>
 
-            <div class="divider"></div>
 
-            <div class="points">
+            <div class="question-divider"></div>
+
+
+            <div class="question-points">
+
                 400
+
             </div>
 
         </div>
 
 
-        <!-- QUESTION 5 -->
 
-        <div class="question-card" data-question="5">
+        <!-- =========================================
+             QUESTION 5
+        ========================================== -->
 
-            <div class="question-title">
+        <div
+            class="question-card"
+
+            data-track="SPORTS"
+
+            data-question="Who is known as the fastest man in the world?"
+
+            data-points="500"
+
+            data-answer="Usain Bolt is widely known as the fastest man in the world."
+        >
+
+            <div class="question-name">
+
                 QUESTION 5
+
             </div>
 
-            <div class="divider"></div>
 
-            <div class="points">
+            <div class="question-divider"></div>
+
+
+            <div class="question-points">
+
                 500
+
             </div>
 
         </div>
 
 
-        <!-- QUESTION 6 -->
 
-        <div class="question-card" data-question="6">
+        <!-- =========================================
+             QUESTION 6
+        ========================================== -->
 
-            <div class="question-title">
+        <div
+            class="question-card"
+
+            data-track="SPORTS"
+
+            data-question="Which country has won the most Cricket World Cups?"
+
+            data-points="600"
+
+            data-answer="Australia has won the Men's Cricket World Cup six times."
+        >
+
+            <div class="question-name">
+
                 QUESTION 6
+
             </div>
 
-            <div class="divider"></div>
 
-            <div class="points">
+            <div class="question-divider"></div>
+
+
+            <div class="question-points">
+
                 600
+
             </div>
 
         </div>
+
 
     </main>
 
 
-    <!-- =====================================
+
+    <!-- =================================================
          QUESTION POPUP
-    ====================================== -->
+    ================================================== -->
 
-    <div class="popup" id="questionPopup">
+    <div
+        class="question-popup"
+        id="questionPopup"
+    >
 
-        <div class="popup-box">
 
-            <button class="close-btn" id="closePopup">
+        <div class="popup-content">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="close-popup"
+                id="closePopup"
+            >
+
                 ×
+
             </button>
 
-            <div class="popup-small">
-                SPORTS TRACK
+
+
+            <!-- TRACK -->
+
+            <div
+                class="popup-track"
+                id="popupTrack"
+            >
+
+                SPORTS
+
             </div>
 
-            <h2 id="popupQuestion">
-                QUESTION 1
-            </h2>
 
-            <div class="popup-points" id="popupPoints">
+
+            <!-- QUESTION -->
+
+            <div
+                class="popup-question"
+                id="popupQuestion"
+            >
+
+                Question
+
+            </div>
+
+
+
+            <!-- POINTS -->
+
+            <div
+                class="popup-points"
+                id="popupPoints"
+            >
+
                 100
+
             </div>
 
-            <button class="start-question">
-                START QUESTION
+
+
+            <!-- ANSWER BUTTON -->
+
+            <button
+                class="answer-button"
+                id="answerButton"
+            >
+
+                SHOW ANSWER
+
             </button>
+
+
+
+            <!-- ANSWER -->
+
+            <div
+                class="popup-answer"
+                id="popupAnswer"
+            >
+
+            </div>
+
 
         </div>
 
     </div>
 
 
-    <script src="script.js"></script>
+
+    <!-- =================================================
+         COMMON JS
+    ================================================== -->
+
+    <script src="track.js"></script>
 
 </body>
 

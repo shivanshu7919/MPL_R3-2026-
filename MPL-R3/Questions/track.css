@@ -1,0 +1,1078 @@
+/* =========================================================
+   COMMON TRACK PAGE CSS
+   Used by:
+   sports.html
+   movies.html
+   memes.html
+   maths.html
+   songs.html
+   games.html
+   tiebreaker.html
+   rapid-fire.html
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #603016;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 255, 255, 0.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(110, 55, 20, 0.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #e9c99c,
+            #d7ae7a,
+            #e8c394,
+            #d3a573
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SUBTLE PAPER TEXTURE
+========================================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 4px,
+            rgba(80, 40, 15, 0.1) 5px
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.track-navbar {
+
+    width: calc(100% - 28px);
+
+    height: 135px;
+
+    margin: 6px 14px 0;
+
+    padding: 12px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-radius: 25px;
+
+    border: 3px solid #6d301a;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6d2f1b,
+            #91492b,
+            #6a2c18
+        );
+
+    box-shadow:
+
+        inset 0 0 20px
+        rgba(45, 15, 5, 0.65),
+
+        0 8px 15px
+        rgba(55, 25, 10, 0.35);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.track-logo {
+
+    width: 150px;
+
+    height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.track-logo img {
+
+    width: 105px;
+
+    height: 105px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            3px 4px 3px
+            rgba(30, 10, 0, 0.55)
+        );
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.track-navigation {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   NAV BUTTON
+========================================================= */
+
+.track-nav-button {
+
+    height: 78px;
+
+    min-width: 280px;
+
+    padding: 0 40px;
+
+    border-radius: 45px;
+
+    border: 3px solid #c99b65;
+
+    cursor: pointer;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #fff8ec;
+
+    background:
+        linear-gradient(
+            180deg,
+            #754321,
+            #47230f
+        );
+
+    text-shadow:
+        2px 3px 2px
+        rgba(0, 0, 0, 0.7);
+
+    box-shadow:
+
+        inset 0 3px 3px
+        rgba(255, 255, 255, 0.18),
+
+        inset 0 -8px 15px
+        rgba(20, 5, 0, 0.4),
+
+        0 4px 8px
+        rgba(40, 15, 5, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.track-nav-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    filter:
+        brightness(1.15);
+
+    box-shadow:
+
+        inset 0 3px 3px
+        rgba(255, 255, 255, 0.25),
+
+        0 8px 18px
+        rgba(40, 15, 5, 0.5);
+}
+
+
+/* =========================================================
+   POWERUP
+========================================================= */
+
+.power-icon {
+
+    color: #ffd34e;
+
+    margin-left: 12px;
+
+    text-shadow:
+        0 0 8px
+        rgba(255, 205, 50, 0.8);
+}
+
+
+/* =========================================================
+   RESET ICON
+========================================================= */
+
+.reset-icon {
+
+    margin-left: 15px;
+
+    font-size: 42px;
+}
+
+
+/* =========================================================
+   TRACK HEADER
+========================================================= */
+
+.track-header {
+
+    text-align: center;
+
+    padding-top: 75px;
+
+    margin-bottom: 35px;
+}
+
+
+.track-title {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(48px, 5vw, 76px);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #713819;
+
+    text-shadow:
+
+        2px 3px 1px
+        rgba(255, 239, 210, 0.9),
+
+        4px 5px 3px
+        rgba(75, 30, 5, 0.3);
+}
+
+
+/* =========================================================
+   TITLE DECORATION
+========================================================= */
+
+.title-decoration {
+
+    margin-top: 10px;
+
+    color: #a86d29;
+
+    font-size: 18px;
+
+    letter-spacing: 12px;
+}
+
+
+/* =========================================================
+   QUESTION GRID
+========================================================= */
+
+.question-grid {
+
+    width: 86%;
+
+    max-width: 1400px;
+
+    margin: 0 auto 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px 55px;
+}
+
+
+/* =========================================================
+   QUESTION CARD
+========================================================= */
+
+.question-card {
+
+    height: 235px;
+
+    border-radius: 22px;
+
+    border: 3px solid
+        rgba(255, 244, 222, 0.95);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255, 250, 237, 0.55),
+            rgba(195, 148, 99, 0.48)
+        );
+
+    box-shadow:
+
+        inset 0 2px 5px
+        rgba(255, 255, 255, 0.8),
+
+        inset 0 -10px 20px
+        rgba(120, 65, 25, 0.15),
+
+        0 10px 18px
+        rgba(85, 40, 15, 0.28);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD SHINE
+========================================================= */
+
+.question-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150%;
+
+    height: 60%;
+
+    top: -35%;
+
+    left: -25%;
+
+    transform:
+        rotate(-12deg);
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.3),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.question-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+
+        inset 0 2px 5px white,
+
+        0 18px 30px
+        rgba(75, 30, 8, 0.35),
+
+        0 0 18px
+        rgba(255, 211, 142, 0.5);
+}
+
+
+/* =========================================================
+   QUESTION TEXT
+========================================================= */
+
+.question-name {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #673314;
+
+    text-shadow:
+
+        1px 2px 1px
+        #fff1d5,
+
+        2px 3px 2px
+        rgba(80, 30, 5, 0.3);
+}
+
+
+/* =========================================================
+   CARD DIVIDER
+========================================================= */
+
+.question-divider {
+
+    width: 55%;
+
+    height: 2px;
+
+    margin: 15px 0 12px;
+
+    background: #a66c2a;
+
+    position: relative;
+}
+
+
+.question-divider::before,
+.question-divider::after {
+
+    content: "◆";
+
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #a66c2a;
+
+    font-size: 9px;
+}
+
+
+.question-divider::before {
+
+    left: -8px;
+}
+
+
+.question-divider::after {
+
+    right: -8px;
+}
+
+
+/* =========================================================
+   POINTS
+========================================================= */
+
+.question-points {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #9b641f;
+
+    text-shadow:
+
+        1px 2px 1px
+        #fff0d2,
+
+        2px 3px 2px
+        rgba(80, 30, 5, 0.2);
+}
+
+
+/* =========================================================
+   QUESTION POPUP
+========================================================= */
+
+.question-popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(40, 17, 5, 0.72);
+
+    backdrop-filter:
+        blur(6px);
+
+    z-index: 100;
+}
+
+
+.question-popup.active {
+
+    display: flex;
+
+    animation:
+        popupFade
+        0.25s
+        ease;
+}
+
+
+/* =========================================================
+   POPUP BOX
+========================================================= */
+
+.popup-content {
+
+    width:
+        min(850px, 90%);
+
+    min-height: 430px;
+
+    padding: 55px;
+
+    border-radius: 28px;
+
+    border: 4px solid #f5dfba;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #f0d4a9,
+            #c59665
+        );
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0, 0, 0, 0.55),
+
+        inset 0 0 20px
+        rgba(90, 40, 10, 0.25);
+
+    text-align: center;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    animation:
+        popupScale
+        0.35s
+        ease;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-popup {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    color: #5b2c14;
+
+    font-size: 42px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.close-popup:hover {
+
+    transform:
+        rotate(90deg)
+        scale(1.1);
+}
+
+
+/* =========================================================
+   POPUP TRACK NAME
+========================================================= */
+
+.popup-track {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    color: #8c5823;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   POPUP QUESTION
+========================================================= */
+
+.popup-question {
+
+    max-width: 700px;
+
+    font-size:
+        clamp(28px, 4vw, 48px);
+
+    line-height: 1.25;
+
+    color: #572711;
+
+    text-shadow:
+
+        1px 2px 1px
+        #fff0d2,
+
+        2px 3px 2px
+        rgba(80, 30, 5, 0.25);
+}
+
+
+/* =========================================================
+   POPUP POINTS
+========================================================= */
+
+.popup-points {
+
+    margin-top: 25px;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    color: #a66b22;
+
+    text-shadow:
+
+        1px 2px 1px
+        #fff0d2;
+}
+
+
+/* =========================================================
+   ANSWER BUTTON
+========================================================= */
+
+.answer-button {
+
+    margin-top: 30px;
+
+    padding:
+        14px 35px;
+
+    border-radius: 30px;
+
+    border: 3px solid #d5a86f;
+
+    background:
+
+        linear-gradient(
+            #75421f,
+            #3d1b0c
+        );
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 10px
+        rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+.answer-button:hover {
+
+    transform:
+        scale(1.06);
+
+    filter:
+        brightness(1.15);
+}
+
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.popup-answer {
+
+    display: none;
+
+    max-width: 700px;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-top:
+        2px solid #a66c2a;
+
+    font-size: 26px;
+
+    color: #673314;
+
+    line-height: 1.4;
+}
+
+
+.popup-answer.show {
+
+    display: block;
+
+    animation:
+        answerReveal
+        0.4s
+        ease;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes popupFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes popupScale {
+
+    from {
+
+        transform:
+            scale(0.75)
+            translateY(30px);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform:
+            scale(1)
+            translateY(0);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes answerReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SELECTED CARD
+========================================================= */
+
+.question-card.used {
+
+    opacity: 0.45;
+
+    filter:
+        grayscale(0.3);
+}
+
+
+.question-card.used:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.01);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .track-nav-button {
+
+        min-width: 220px;
+
+        font-size: 32px;
+    }
+
+    .question-grid {
+
+        width: 90%;
+
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .track-navbar {
+
+        height: auto;
+
+        min-height: 130px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+
+    .track-logo {
+
+        height: 80px;
+    }
+
+
+    .track-navigation {
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .track-nav-button {
+
+        min-width: 0;
+
+        flex: 1;
+
+        height: 60px;
+
+        padding: 0 15px;
+
+        font-size: 24px;
+    }
+
+
+    .question-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+
+    .question-card {
+
+        height: 210px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .track-navbar {
+
+        margin: 5px 8px 0;
+
+        width: calc(100% - 16px);
+    }
+
+
+    .track-navigation {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .track-nav-button {
+
+        width: 100%;
+
+        flex: none;
+    }
+
+
+    .track-header {
+
+        padding-top: 45px;
+    }
+
+
+    .track-title {
+
+        font-size: 42px;
+    }
+
+
+    .question-grid {
+
+        grid-template-columns: 1fr;
+
+        width: 90%;
+    }
+
+
+    .question-card {
+
+        height: 200px;
+    }
+
+
+    .popup-content {
+
+        width: 92%;
+
+        min-height: 350px;
+
+        padding: 40px 25px;
+    }
+
+
+    .popup-question {
+
+        font-size: 28px;
+    }
+}
