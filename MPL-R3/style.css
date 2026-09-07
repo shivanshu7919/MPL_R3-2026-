@@ -271,6 +271,128 @@ body::before {
 }
 
 
+
+/* =====================================================
+   DOODLES
+===================================================== */
+
+.doodle {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    font-size: 65px;
+
+    z-index: 0;
+
+}
+
+
+.doodle-left {
+
+    left: 2%;
+
+    top: 400px;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.doodle-right {
+
+    right: 2%;
+
+    top: 350px;
+
+    font-size: 45px;
+
+}
+
+.image-movie{
+    position: fixed; 
+  left: 0 !important;
+  top: 80%;
+  transform: translateY(-50%) rotate(-12deg);
+  transform-origin: left center;
+  
+  /* Removes white background */
+  mix-blend-mode: multiply;
+  
+  /* Responsive width */
+  width: 25vw;
+  height: auto;
+  z-index: 0;
+}
+
+
+/* =====================================================
+   PAPER PLANE
+===================================================== */
+
+.paper-plane {
+
+    position: fixed;
+
+    right: 45%;
+
+    top: 250px;
+
+    font-size: 80px;
+
+    color: #c56002;
+
+    transform:
+        rotate(-20deg);
+
+    text-shadow:
+        3px 3px 0 #111;
+
+    z-index: 0;
+
+}
+
+
+/* =====================================================
+   SCRIBBLES
+===================================================== */
+
+.scribble {
+
+    position: fixed;
+
+    font-size: 75px;
+
+    font-weight: bold;
+
+    pointer-events: none;
+
+}
+
+
+.scribble-1 {
+
+    left: 4%;
+
+    bottom: 160px;
+
+    transform: rotate(20deg);
+
+}
+
+
+.scribble-2 {
+
+    right: 5%;
+
+    bottom: 160px;
+
+    transform: rotate(-20deg);
+
+}
+
+
 /* =========================================
    HERO
 ========================================= */
